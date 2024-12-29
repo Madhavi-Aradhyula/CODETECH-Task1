@@ -22,7 +22,12 @@ This repository contains the design and simulation of fundamental digital logic 
 
 ### **Features**
 - Implementation of **logic gates** (AND, OR, NOT, NAND, NOR, XOR).  
-- Design of a **half adder** and **full adder** for arithmetic operations.  
+- Design of a **half adder** and **full adder** for arithmetic operations.
+
+
+git commit -m "Deleted README.md file"
+
+
 - Development of **multiplexers** for data selection.  
 - Comprehensive testbenches for each module to validate functionality.  
 

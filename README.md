@@ -34,19 +34,19 @@ This repository contains the design and simulation of fundamental digital logic 
 - **Xilinx Vivado:** For design entry, simulation, and waveform analysis.
 
 ### **Simulation Results**
-- **Logic Gates**
+ **Logic Gates**
   ![Logic_Gates](https://github.com/user-attachments/assets/11bbe4a0-affa-48ea-bca2-a9e0156c5e7c)
 
 
--**Half Adder**
+**Half Adder**
   ![Half_adder](https://github.com/user-attachments/assets/25976d66-7fa1-4bbc-b51c-c7dad030a2a9)
 
 
--**Full Adder**
+**Full Adder**
 ![Full_adder](https://github.com/user-attachments/assets/f4e708f5-30e5-4f24-87f8-b801a1edf189)
 
 
--**4x1Multiplexer**
+**4x1Multiplexer**
 ![4x1mux](https://github.com/user-attachments/assets/a2131430-13ca-4e6f-9fe9-b9bf1fb9a398)
 
 

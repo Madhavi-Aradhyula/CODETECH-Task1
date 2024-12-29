@@ -1,0 +1,35 @@
+//DUT
+module FA(a,b,c,S,C0);
+input a,b,c;
+output S,C0;  
+wire w1,w2,w3;
+ xor a1(w1,a,b); //(a^b)
+ xor a2(S,w1,c); //sum=(a^b^c)
+ and b1(w2,w1,c); //(a^b)&c
+ and b2(w3,a,b); //(a&b)
+ or b3(C0,w2,w3); //carry=(a^b)&c|(a&b)
+ endmodule
+
+//Testbench
+module FAtb;
+ reg a,b,c;
+ wire S,C0;
+ FA dut(.a(a),.b(b),.c(c),.S(S),.C0(C0));
+ initial begin
+ a=0;b=0;c=0;#100;
+ a=0;b=0;c=1;#100;
+ a=0;b=1;c=0;#100;
+ a=0;b=1;c=1;#100;
+ a=1;b=0;c=0;#100;
+ a=1;b=0;c=1;#100;
+ a=1;b=1;c=0;#100;
+ a=1;b=1;c=1;#100;
+ end
+ initial begin
+ $monitor("a=%b,b=%b,c=%b,S=%b,C0=%b",a,b,c,S,C0);
+ end
+initial begin
+ $dumpfile("dump.vcd");
+ $dumpvars(0,a,b,c,S,C0);
+ end 
+endmodule

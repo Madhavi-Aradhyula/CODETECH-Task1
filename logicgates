@@ -1,0 +1,31 @@
+//DUT using Data flow model
+module logicgates(input a,b, output y1,y2,y3,y4,y5,y6,y7);
+assign y1=~a;          // NOT logic
+assign y2=a&b;        // AND logic
+assign y3=~(a&b);     //NAND logic
+assign y4=a|b;        //OR logic
+assign y5=~(a|b);     //NOR logic
+assign y6=a^b;        //EX-OR logic
+assign y7=~(a^b);     //EX-NOR logic
+endmodule
+
+//Testbench
+module logicgatestb;
+reg a,b;
+wire y1,y2,y3,y4,y5,y6,y7;
+logicgates dut(.a(a),.b(b),.y1(y1),.y2(y2),.y3(y3),.y4(y4),.y5(y5),.y6(y6),.y7(y7));
+initial begin
+#100 a=0;b=0;
+#100 a=0;b=1;
+#100 a=1;b=0;
+#100 a=1;b=1;
+#600 $finish;
+end
+initial begin
+$monitor("a=%b,b=%b,y1=%b,y2=%b,y3=%b,y4=%b,y5=%b,y6=%b,y7=%b",a,b,y1,y2,y3,y4,y5,y6,y7);
+end
+initial begin
+$dumpfile("dumpfile.vcd"); 
+$dumpvars(0,a,b,y1,y2,y3,y4,y5,y6,y7);
+end
+endmodule

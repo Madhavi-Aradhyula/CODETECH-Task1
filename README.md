@@ -25,9 +25,6 @@ This repository contains the design and simulation of fundamental digital logic 
 - Design of a **half adder** and **full adder** for arithmetic operations.
 
 
-git commit -m "Deleted README.md file"
-
-
 - Development of **multiplexers** for data selection.  
 - Comprehensive testbenches for each module to validate functionality.  
 
